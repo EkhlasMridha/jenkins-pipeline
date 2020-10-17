@@ -10,14 +10,12 @@
         <div class="full-width">
             <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
                 <div fxFlex="10" fxFlex.xs="20">
-                    <span>Suggested tags:</span>
+                    <span style="font-size: 16px;">Suggested tags:</span>
                 </div>
                 <div fxFlex="90" fxFlex.xs="80" fxLayout="row" fxLayoutGap="15px" class="scroll-contain">
                     <div class="scroller" fxLayout="row" fxLayoutGap="15px">
                         <div class="tag-container" fxLayoutGap="10px">
-                            <button mat-raised-button color="primary">Tags</button>
-                            <button mat-raised-button>Tags</button>
-                            <button mat-raised-button>Tags</button>
+                            <button mat-raised-button color="primary" *ngFor="let item of tagList">{{item}}</button>
                         </div>
                     </div>
                 </div>
