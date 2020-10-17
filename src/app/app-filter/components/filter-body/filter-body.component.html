@@ -7,13 +7,16 @@
             </div>
             <mat-divider></mat-divider>
             <div fxLayout="column" class="full-width">
-                <div class="full-width" style="margin-top: 10px;">
+                <div class="full-width" style="padding-top: 10px;">
                     <mat-form-field appearance="outline" class="full-width">
                         <mat-label>Country</mat-label>
                         <mat-select>
                             <mat-option *ngFor="let country of countryList" [value]="country">{{country}}</mat-option>
                         </mat-select>
                     </mat-form-field>
+                </div>
+                <div class="full-width" fxLayoutGap="15px">
+                    <app-filter-selector *ngFor="let filter of myFilters" [filterList]="filter"></app-filter-selector>
                 </div>
             </div>
         </mat-card>

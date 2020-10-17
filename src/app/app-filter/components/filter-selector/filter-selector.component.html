@@ -1,0 +1,11 @@
+<div fxLayout="column" *ngIf="filterList">
+    <span class="filter-header primary-color">{{filterList.header}}</span>
+    <div fxLayout="column">
+        <div fxLayout="column">
+            <section fxLayout="column">
+                <mat-checkbox *ngFor="let item of list">{{item}}</mat-checkbox>
+            </section>
+            <span class="more accent-color cursor-pointer" *ngIf="hasMore" (click)="showMore()">+More</span>
+        </div>
+    </div>
+</div>

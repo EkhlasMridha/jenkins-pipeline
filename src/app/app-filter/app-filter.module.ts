@@ -11,9 +11,11 @@ import { MatGridListModule } from "@angular/material/grid-list";
 import { MatIconModule } from "@angular/material/icon";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatSelectModule } from "@angular/material/select";
+import { FilterSelectorComponent } from './components/filter-selector/filter-selector.component';
+import {MatCheckboxModule} from "@angular/material/checkbox"
 
 @NgModule({
-  declarations: [FilterComponent, FilterBodyComponent],
+  declarations: [FilterComponent, FilterBodyComponent, FilterSelectorComponent],
   imports: [
     CommonModule,
     MatFormFieldModule,
@@ -24,7 +26,8 @@ import { MatSelectModule } from "@angular/material/select";
     MatGridListModule,
     MatIconModule,
     MatDividerModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCheckboxModule
   ],
   exports:[FilterComponent]
 })

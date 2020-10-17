@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/theming";
 html,
 body {
   height:100%;
@@ -12,4 +13,134 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .full-height{
   height: 100%;
+}
+
+$mat-arc-primary: (
+  50 : #eff8f3,
+  100 : #d7eee2,
+  200 : #bde3ce,
+  300 : #a3d7ba,
+  400 : #8fcfac,
+  500 : #7bc69d,
+  600 : #73c095,
+  700 : #68b98b,
+  800 : #5eb181,
+  900 : #4ba46f,
+  A100 : #ffffff,
+  A200 : #ceffe1,
+  A400 : #9bffc2,
+  A700 : #81ffb3,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #ffffff,
+      600 : #000000,
+      700 : #000000,
+      800 : #000000,
+      900 : #000000,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+$mat-arc-accent: (
+  50 : #e6eaeb,
+  100 : #c1cacc,
+  200 : #97a7ab,
+  300 : #6d8389,
+  400 : #4e696f,
+  500 : #2f4e56,
+  600 : #2a474f,
+  700 : #233d45,
+  800 : #1d353c,
+  900 : #12252b,
+  A100 : #6cd5ff,
+  A200 : #39c6ff,
+  A400 : #06b8ff,
+  A700 : #00a8eb,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #ffffff,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #ffffff,
+  )
+);
+
+$mat-arc-warn: (
+  50: #f9e0e0,
+  100: #f0b3b3,
+  200: #e68080,
+  300: #db4d4d,
+  400: #d42626,
+  500: #cc0000,
+  600: #c70000,
+  700: #c00000,
+  800: #b90000,
+  900: #ad0000,
+  A100: #ffd7d7,
+  A200: #ffa4a4,
+  A400: #ff7171,
+  A700: #ff5858,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+
+@include mat-core();
+
+$mat-theme-primary: mat-palette($mat-arc-primary);
+$mat-theme-accent: mat-palette($mat-arc-accent);
+$mat-theme-warn: mat-palette($mat-arc-warn);
+
+$custom-theme: mat-light-theme(
+  $mat-theme-primary,
+  $mat-theme-accent,
+  $mat-theme-warn
+);
+
+@include angular-material-theme($custom-theme);
+
+
+$primary: map-get($custom-theme, primary );
+$accent: map-get($custom-theme, accent );
+
+.primary-color{
+  color: mat-color($primary,default);
+}
+
+.accent-color{
+  color: mat-color($accent,default);
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
