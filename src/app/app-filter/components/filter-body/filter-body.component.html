@@ -1,0 +1,21 @@
+<div fxLayout="row" class="full-width">
+    <div fxFlex="20" fxFlex.xs="100">
+        <mat-card>
+            <div fxLayout="row" fxLayoutGap="10px" style="margin-bottom: 10px;">
+                <img class="funnel-icon" src="../../../../assets/icons/funnel.svg" alt="">
+                <span>Filters</span>
+            </div>
+            <mat-divider></mat-divider>
+            <div fxLayout="column" class="full-width">
+                <div class="full-width" style="margin-top: 10px;">
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Country</mat-label>
+                        <mat-select>
+                            <mat-option *ngFor="let country of countryList" [value]="country">{{country}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div>
