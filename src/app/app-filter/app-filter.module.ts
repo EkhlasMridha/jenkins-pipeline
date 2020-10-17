@@ -12,10 +12,11 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatSelectModule } from "@angular/material/select";
 import { FilterSelectorComponent } from './components/filter-selector/filter-selector.component';
-import {MatCheckboxModule} from "@angular/material/checkbox"
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import { ScrollableDirective } from './directives/scrollable.directive'
 
 @NgModule({
-  declarations: [FilterComponent, FilterBodyComponent, FilterSelectorComponent],
+  declarations: [FilterComponent, FilterBodyComponent, FilterSelectorComponent, ScrollableDirective],
   imports: [
     CommonModule,
     MatFormFieldModule,
