@@ -84,6 +84,17 @@ export class FilterBodyComponent implements OnInit {
     }
   ]
 
+  constructor (private sanitizer:DomSanitizer,private iconRegistry:MatIconRegistry) {
+    this.loadIcon("funnel");
+  }
+
+  loadIcon(icon: string) {
+    this.iconRegistry.addSvgIcon(
+      icon,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`../../../../assets/icons/${icon}.svg`)
+    );
+  }
+
   ngOnInit(): void {
   }
 }

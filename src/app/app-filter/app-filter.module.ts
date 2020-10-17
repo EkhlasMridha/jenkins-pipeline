@@ -14,6 +14,7 @@ import { MatSelectModule } from "@angular/material/select";
 import { FilterSelectorComponent } from './components/filter-selector/filter-selector.component';
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import { ScrollableDirective } from './directives/scrollable.directive'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [FilterComponent, FilterBodyComponent, FilterSelectorComponent, ScrollableDirective],
@@ -28,7 +29,8 @@ import { ScrollableDirective } from './directives/scrollable.directive'
     MatIconModule,
     MatDividerModule,
     MatSelectModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    HttpClientModule
   ],
   exports:[FilterComponent]
 })
