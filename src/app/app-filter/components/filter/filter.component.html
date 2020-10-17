@@ -8,21 +8,28 @@
             </mat-form-field>
         </div>
         <div class="full-width">
-            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
-                <div fxFlex="10" fxFlex.xs="20">
-                    <span style="font-size: 16px;">Suggested tags:</span>
+            <div class="section-tag" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+                <div fxFlex="15" fxFlex.xs="20">
+                    <span style="font-size: 16px;" class="accent-color">Suggested tags:</span>
                 </div>
-                <div fxFlex="90" fxFlex.xs="80" fxLayout="row" fxLayoutGap="15px" class="scroll-contain">
+                <div fxFlex="85" fxFlex.xs="80" fxLayout="row" fxLayoutGap="15px" class="scroll-contain scroll-hide">
                     <div class="scroller" fxLayout="row" fxLayoutGap="15px">
                         <div class="tag-container" fxLayoutGap="10px">
                             <button mat-raised-button color="primary" *ngFor="let item of tagList">{{item}}</button>
                         </div>
                     </div>
                 </div>
-            </div>
+                </div>
         </div>
-
-        <div class="full-width">
+        <div fxLayout="row" fxLayoutGap="15px">
+            <button mat-icon-button color="accent" (click)="scrollLeft()">
+                <mat-icon>chevron_left</mat-icon>
+            </button>
+            <button mat-icon-button color="accent" (click)="scrollRight()">
+                <mat-icon>chevron_right</mat-icon>
+            </button>
+        </div>
+        <div class="full-width" fxLayout="row">
             <app-filter-body></app-filter-body>
         </div>
 

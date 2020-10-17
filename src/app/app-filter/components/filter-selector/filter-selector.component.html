@@ -5,7 +5,7 @@
             <section fxLayout="column">
                 <mat-checkbox *ngFor="let item of list">{{item}}</mat-checkbox>
             </section>
-            <span class="more accent-color cursor-pointer" *ngIf="hasMore" (click)="showMore()">+More</span>
+            <span class="more accent-color cursor-pointer" *ngIf="hasMore" (click)="showMore()">{{!expanded?'+More':'-Less'}}</span>
         </div>
     </div>
 </div>

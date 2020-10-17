@@ -10,6 +10,7 @@ export class FilterSelectorComponent implements OnInit {
   @Input() filterList: FilterModel;
   list: string[];
   hasMore: boolean;
+  expanded: boolean;
   constructor () { 
    
   }
@@ -29,7 +30,13 @@ export class FilterSelectorComponent implements OnInit {
   }
 
   showMore() {
-    this.list = this.filterList.settigns;
-    this.hasMore = false;
+    if (this.expanded) {
+      this.list = this.checkValue(this.filterList.settigns);
+      this.expanded = false;
+    } else {
+      this.list = this.filterList.settigns;
+      this.expanded = true;
+    }
+    
   }
 }
