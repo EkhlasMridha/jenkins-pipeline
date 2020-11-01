@@ -2,8 +2,10 @@ pipeline{
     agent any
     stages{
         stage('initialize'){
-            script {
+            steps{
+                script {
                     properties([pipelineTriggers([pollSCM('')])])
+                }
             }
         }
         stage('package'){
