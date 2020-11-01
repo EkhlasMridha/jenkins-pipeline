@@ -21,7 +21,7 @@ pipeline{
             steps{
                 echo 'Deploying project'
                 nodejs('NodeJS'){
-                    sh 'cp -r /var/lib/jenkins/workspace/jenkins-prototype_master/dist/rootline-basic /var/www/html'
+                    sh 'cp -r /var/lib/jenkins/workspace/jenkins-git_master/dist/rootline-basic /var/www/html'
                 }
             }
         }
