@@ -13,7 +13,7 @@ pipeline{
             steps{
                 echo 'Building project'
                 nodejs('NodeJS'){
-                    sh 'npm run build'
+                    sh 'npm run-script build'
                 }
             }
         }
