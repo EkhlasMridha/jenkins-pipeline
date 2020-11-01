@@ -20,6 +20,7 @@ pipeline{
         stage('deploy'){
             steps{
                 echo 'Deploying project'
+                sh 'cp -r /var/lib/jenkins/workspace/jenkins-prototype_master/dist/rootline-basic /var/www/html'
             }
         }
     }
