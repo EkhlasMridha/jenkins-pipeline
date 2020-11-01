@@ -4,8 +4,8 @@ pipeline{
         stage('initialize'){
             steps{
                 script {
-                    properties([pipelineTriggers([gitScmPolling('')])])
-                }
+                    properties([pipelineTriggers([pollSCM('')])])
+            }
             }
         }
         stage('package'){
