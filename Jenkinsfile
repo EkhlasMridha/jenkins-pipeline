@@ -4,7 +4,7 @@ pipeline{
         stage('initialize'){
             steps{
                 script {
-                    properties([pipelineTriggers([pollSCM('')])])
+                    properties([pipelineTriggers([gitScmPolling('')])])
                 }
             }
         }
